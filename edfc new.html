@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDFC – Employment | Self Employment | Financial Empowerment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .logo-font { font-family: 'Cinzel', serif; }
+        
+        .hero-slide {
+            transition: opacity 1s ease-in-out;
+            filter: blur(5px);
+            transform: scale(1.05);
+        }
+
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        
+        .dropdown-group:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .ai-pulse { animation: pulse-subtle 3s infinite ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen relative">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="bg-[#0A2540] text-slate-200 text-xs py-2 px-4">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+                <span><i class="fa-solid fa-shield-halved text-[#C59B27] mr-1"></i> One Customer • One PAN • One EDFC ID • One Login</span>
+                <div class="flex gap-4">
+                    <a href="tel:9623595774" class="hover:text-[#C59B27] transition"><i class="fa-solid fa-phone"></i> 96235 95774</a>
+                    <a href="mailto:edfcfintech@gmail.com" class="hover:text-[#C59B27] transition"><i class="fa-solid fa-envelope"></i> edfcfintech@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="flex items-center gap-0.5">
+                    <span class="logo-font text-3xl md:text-4xl font-black text-[#0A2540] tracking-tight">EDF</span>
+                    <div class="relative w-8 h-8 md:w-10 md:h-10 flex items-center justify-center -ml-1">
+                        <span class="logo-font text-3xl md:text-4xl font-black text-[#0A2540]">C</span>
+                        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" fill="none">
+                            <path d="M 5 80 Q 40 72 90 20" stroke="#0A2540" stroke-width="7" stroke-linecap="round"/>
+                            <path d="M 8 75 Q 45 60 92 14" stroke="#C59B27" stroke-width="13" stroke-linecap="round"/>
+                            <path d="M 92 14 L 68 20 L 86 38 Z" fill="#C59B27"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hidden sm:block border-l-2 border-slate-300 pl-2">
+                    <span class="block text-xs font-black text-[#C59B27] tracking-widest leading-none">FINTECH</span>
+                    <span class="block text-[9px] font-bold text-[#0A2540] tracking-tighter uppercase">Services Pvt. Ltd.</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-4 font-medium text-sm text-slate-700">
+                <a href="#home" class="hover:text-[#0A2540] transition py-2">Home</a>
+
+                <div class="relative dropdown-group py-2">
+                    <button class="flex items-center gap-1 hover:text-[#0A2540] transition">
+                        <span>Employment</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-white shadow-xl rounded-xl border border-slate-100 p-3 z-50">
+                        <p class="text-[10px] font-bold uppercase text-[#C59B27] mb-2 px-2">Employment Service Center</p>
+                        <a href="#employment" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-user-tie w-5 text-slate-400"></i> Job Seeker Portal</a>
+                        <a href="#employment" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-building-user w-5 text-slate-400"></i> Employer Services</a>
+                        <a href="#employment" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-file-invoice-dollar w-5 text-slate-400"></i> Payroll Management</a>
+                        <a href="#employment" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-shield-cat w-5 text-slate-400"></i> EPFO & ESIC Services</a>
+                    </div>
+                </div>
+
+                <div class="relative dropdown-group py-2">
+                    <button class="flex items-center gap-1 hover:text-[#0A2540] transition">
+                        <span>Fintech</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 top-full w-72 bg-white shadow-xl rounded-xl border border-slate-100 p-3 z-50">
+                        <p class="text-[10px] font-bold uppercase text-[#C59B27] mb-2 px-2">Taxation & Business</p>
+                        <a href="#fintech" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-receipt w-5 text-slate-400"></i> ITR, GST & TDS Filings</a>
+                        <a href="#fintech" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-briefcase w-5 text-slate-400"></i> Company & MSME Registration</a>
+                        <a href="#fintech" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-certificate w-5 text-slate-400"></i> Licenses (FSSAI, ISO, DSC)</a>
+                        <a href="#fintech" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-chart-line w-5 text-slate-400"></i> DPR & Accounting</a>
+                    </div>
+                </div>
+
+                <div class="relative dropdown-group py-2">
+                    <button class="flex items-center gap-1 hover:text-[#0A2540] transition">
+                        <span>Finserv</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 top-full w-60 bg-white shadow-xl rounded-xl border border-slate-100 p-3 z-50">
+                        <p class="text-[10px] font-bold uppercase text-[#C59B27] mb-2 px-2">Financial Guidance</p>
+                        <a href="#finserv" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-landmark w-5 text-slate-400"></i> Business & MSME Loans</a>
+                        <a href="#finserv" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-house w-5 text-slate-400"></i> Home & Personal Loans</a>
+                        <a href="#finserv" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-shield-heart w-5 text-slate-400"></i> Insurance Advisory</a>
+                        <a href="#finserv" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-gauge-high w-5 text-slate-400"></i> Credit Score Guidance</a>
+                    </div>
+                </div>
+
+                <div class="relative dropdown-group py-2">
+                    <button class="flex items-center gap-1 hover:text-[#0A2540] transition">
+                        <span>Ecosystem</span> <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 top-full w-64 bg-white shadow-xl rounded-xl border border-slate-100 p-3 z-50">
+                        <p class="text-[10px] font-bold uppercase text-[#C59B27] mb-2 px-2">Solutions & Media</p>
+                        <a href="#digital" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-laptop-code w-5 text-slate-400"></i> Web Digital Solutions</a>
+                        <a href="#mission" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-users-gear w-5 text-slate-400"></i> Development Mission</a>
+                        <a href="#times" class="block px-3 py-1.5 text-xs text-slate-700 hover:bg-slate-100 rounded-md"><i class="fa-solid fa-newspaper w-5 text-slate-400"></i> EDFC Times News</a>
+                    </div>
+                </div>
+
+                <a href="#membership" class="hover:text-[#0A2540] transition py-2">Membership</a>
+                <a href="#dashboards" class="hover:text-[#0A2540] transition py-2">Dashboards</a>
+                <a href="#contact" class="hover:text-[#0A2540] transition py-2">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <button onclick="openLoginModal()" class="px-4 py-2 text-sm font-semibold text-[#0A2540] border border-[#0A2540] rounded-lg hover:bg-slate-100 transition">
+                    Login
+                </button>
+                <button onclick="openCreateIdModal()" class="px-4 py-2 text-sm font-semibold text-white bg-[#0A2540] rounded-lg hover:bg-[#12365B] shadow-md transition">
+                    Create EDFC ID
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="loginModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative border border-slate-100">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <h3 class="text-xl font-bold text-slate-800">EDFC Portal Login</h3>
+                <p class="text-xs text-slate-500 mt-1">One Customer • One PAN • One EDFC ID • One Login</p>
+            </div>
+            <form onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">EDFC ID / Mobile / Email</label>
+                    <input type="text" id="loginIdInput" required placeholder="Enter EDFC ID" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Password</label>
+                    <input type="password" id="loginPasswordInput" required placeholder="Enter Password" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                </div>
+                <button type="submit" class="w-full py-3 bg-[#0A2540] text-white font-bold rounded-lg hover:bg-[#12365B] transition shadow-md">
+                    Submit & Login
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="createIdModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-lg w-full p-6 relative border border-slate-100 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCreateIdModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <h3 class="text-xl font-bold text-slate-800">Create EDFC ID</h3>
+                <p class="text-xs text-slate-500 mt-1">Get your unique digital identity for all EDFC services</p>
+            </div>
+            <form id="createIdForm" onsubmit="handleCreateId(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Full Name <span class="text-red-500">*</span></label>
+                    <input type="text" id="regName" required placeholder="Enter Full Name" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Mobile Number <span class="text-red-500">*</span></label>
+                    <input type="tel" id="regMobile" required placeholder="10-digit Mobile Number" pattern="[0-9]{10}" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">PAN Card Number <span class="text-red-500">*</span></label>
+                    <input type="text" id="regPan" required placeholder="ABCDE1234F" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" maxlength="10" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm uppercase">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Aadhaar Card Number <span class="text-red-500">*</span></label>
+                    <input type="text" id="regAadhaar" required placeholder="12-digit Aadhaar Number" pattern="[0-9]{12}" maxlength="12" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Password <span class="text-red-500">*</span></label>
+                        <input type="password" id="regPassword" required placeholder="Create Password" minlength="6" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-slate-600 mb-1">Confirm Password <span class="text-red-500">*</span></label>
+                        <input type="password" id="regConfirmPassword" required placeholder="Re-enter Password" minlength="6" class="w-full px-4 py-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2540] text-sm">
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full py-3 bg-[#C59B27] hover:bg-[#B38a20] text-slate-950 font-bold rounded-lg transition shadow-md mt-2">
+                    Generate EDFC ID
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <section id="home" class="relative w-full min-h-[550px] lg:min-h-[650px] flex items-center overflow-hidden bg-slate-950">
+        
+        <div class="absolute inset-0 w-full h-full overflow-hidden">
+            <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-100" style="background-image: url('WhatsApp Image 2026-09-01 at 11.31.16 AM.jpeg');"></div>
+            <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-0" style="background-image: url('WhatsApp Image 2026-09-01 at 11.31.15 AM.jpeg');"></div>
+            <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-0" style="background-image: url('WhatsApp Image 2026-09-01 at 11.31.14 AM (1).jpeg');"></div>
+            <div class="hero-slide absolute inset-0 w-full h-full bg-cover bg-center opacity-0" style="background-image: url('WhatsApp Image 2026-09-01 at 11.31.13 AM.jpeg');"></div>
+        </div>
+
+        <div class="absolute inset-0 bg-[#0A2540]/80 backdrop-blur-md"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 text-white w-full">
+            <div class="max-w-2xl space-y-6">
+                <div class="inline-block px-4 py-1.5 bg-[#C59B27] text-slate-950 rounded-full font-bold text-xs uppercase tracking-wider">
+                    One Stop Solution For All Your Business Needs
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+                    EDFC FINTECH <br><span class="text-[#C59B27]">SERVICES PRIVATE LIMITED</span>
+                </h1>
+                <p class="text-lg text-slate-200 font-medium">
+                    रोजगारातून विकास, विकासातून आर्थिक स्वावलंबन.
+                </p>
+                <div class="flex flex-wrap gap-3 text-sm font-semibold">
+                    <span class="bg-white/10 backdrop-blur-lg px-3 py-1 rounded-md border border-white/20"><i class="fa-solid fa-user-check mr-1 text-[#C59B27]"></i> Employment</span>
+                    <span class="bg-white/10 backdrop-blur-lg px-3 py-1 rounded-md border border-white/20"><i class="fa-solid fa-chart-pie mr-1 text-[#C59B27]"></i> Self Employment</span>
+                    <span class="bg-white/10 backdrop-blur-lg px-3 py-1 rounded-md border border-white/20"><i class="fa-solid fa-indian-rupee-sign mr-1 text-[#C59B27]"></i> Financial Empowerment</span>
+                </div>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <button onclick="openCreateIdModal()" class="px-6 py-3 bg-[#C59B27] hover:bg-[#B38a20] text-slate-950 font-bold rounded-lg shadow-lg transition">Create EDFC ID</button>
+                    <button onclick="openLoginModal()" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/40 rounded-lg backdrop-blur-md transition">EDFC Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 right-8 z-20 flex space-x-2">
+            <span class="dot w-3 h-3 rounded-full bg-white/40 transition"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 transition"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 transition"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 transition"></span>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-slate-100 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900">OUR INTEGRATED ECOSYSTEM</h2>
+                <p class="text-slate-600 mt-2">Compliance • Growth • Employment • Trust</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div id="employment" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-[#C59B27] rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">EDFC Employment Center</h3>
+                        <p class="text-xs text-slate-500 mb-4">Comprehensive HR solutions, recruitment portals, and statutory compliance management.</p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>Job Seeker & Employer Portals</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>End-to-End Payroll Management</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i>EPFO, ESIC & Labour Compliance</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2.5 bg-slate-100 hover:bg-[#0A2540] hover:text-white text-slate-800 font-semibold text-xs rounded-lg transition">Access Employment Center</button>
+                </div>
+
+                <div id="fintech" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-[#0A2540] rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">EDFC FINTECH</h3>
+                        <p class="text-xs text-slate-500 mb-4">Complete business registration, tax filing, and statutory compliance platform.</p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>ITR, GST, TDS & PAN Services</li>
+                            <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>Company, LLP & MSME Registrations</li>
+                            <li><i class="fa-solid fa-check text-blue-600 mr-2"></i>FSSAI, ISO, Trademark & DPR Reports</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2.5 bg-slate-100 hover:bg-[#0A2540] hover:text-white text-slate-800 font-semibold text-xs rounded-lg transition">Explore Fintech Services</button>
+                </div>
+
+                <div id="finserv" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">EDFC FINSERV</h3>
+                        <p class="text-xs text-slate-500 mb-4">Financial advisory, loan assistance, and credit profile improvement.</p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Business, Home & Personal Loans</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>MSME & Project Finance Facilitation</li>
+                            <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i>Credit Score Advisory & Insurance</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2.5 bg-slate-100 hover:bg-[#0A2540] hover:text-white text-slate-800 font-semibold text-xs rounded-lg transition">Connect with Finserv</button>
+                </div>
+
+                <div id="digital" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">EDFC Web Digital</h3>
+                        <p class="text-xs text-slate-500 mb-4">Custom technology solutions to grow and digitize business presence online.</p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-purple-600 mr-2"></i>Website & Mobile App Development</li>
+                            <li><i class="fa-solid fa-check text-purple-600 mr-2"></i>E-Commerce Platforms & Software</li>
+                            <li><i class="fa-solid fa-check text-purple-600 mr-2"></i>Digital Marketing & Branding</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2.5 bg-slate-100 hover:bg-[#0A2540] hover:text-white text-slate-800 font-semibold text-xs rounded-lg transition">Get Digital Solutions</button>
+                </div>
+
+                <div id="mission" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-yellow-100 text-yellow-700 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Development Mission</h3>
+                        <p class="text-xs text-slate-500 mb-4">Community-focused skill development, youth guidance, and self-employment initiatives.</p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-yellow-600 mr-2"></i>Youth & Women Skill Training</li>
+                            <li><i class="fa-solid fa-check text-yellow-600 mr-2"></i>Rural Entrepreneurship Growth</li>
+                            <li><i class="fa-solid fa-check text-yellow-600 mr-2"></i>Community Empowerment Projects</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2.5 bg-slate-100 hover:bg-[#0A2540] hover:text-white text-slate-800 font-semibold text-xs rounded-lg transition">Join Development Mission</button>
+                </div>
+
+                <div id="times" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">EDFC Times</h3>
+                        <p class="text-xs text-slate-500 mb-4">Latest updates on employment, business laws, startup news, and government schemes.</p>
+                        <ul class="text-xs text-slate-700 space-y-2 mb-6">
+                            <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Verified Employment Alerts</li>
+                            <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Government Scheme Guides</li>
+                            <li><i class="fa-solid fa-check text-red-600 mr-2"></i>Business Insights & Success Stories</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2.5 bg-slate-100 hover:bg-[#0A2540] hover:text-white text-slate-800 font-semibold text-xs rounded-lg transition">Read EDFC Times</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboards" class="py-16 bg-white px-4 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900">INTERACTIVE DASHBOARD PREVIEWS</h2>
+                <p class="text-slate-600 mt-2">Customized portals designed around your unique EDFC ID</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-4">
+                            <div>
+                                <span class="text-[10px] bg-[#C59B27] text-slate-950 px-2 py-0.5 font-bold rounded">USER PORTAL</span>
+                                <p class="text-xs font-mono text-slate-400 mt-1">ID: EDFC98765432</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="flex justify-between text-xs mb-1">
+                                <span class="text-slate-400">Profile Completion</span>
+                                <span class="text-[#C59B27] font-bold">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-[#C59B27] h-full w-[80%]"></div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 text-xs font-medium">
+                            <div class="bg-slate-800 p-2.5 rounded-lg border border-slate-700/50"><i class="fa-solid fa-id-card text-blue-400 mr-2"></i>My Profile</div>
+                            <div class="bg-slate-800 p-2.5 rounded-lg border border-slate-700/50"><i class="fa-solid fa-briefcase text-emerald-400 mr-2"></i>Jobs</div>
+                            <div class="bg-slate-800 p-2.5 rounded-lg border border-slate-700/50"><i class="fa-solid fa-wallet text-amber-400 mr-2"></i>Reward Wallet</div>
+                            <div class="bg-slate-800 p-2.5 rounded-lg border border-slate-700/50"><i class="fa-solid fa-folder text-purple-400 mr-2"></i>Documents</div>
+                            <div class="bg-slate-800 p-2.5 rounded-lg border border-slate-700/50"><i class="fa-solid fa-clock-rotate-left text-indigo-400 mr-2"></i>History</div>
+                            <div class="bg-slate-800 p-2.5 rounded-lg border border-slate-700/50"><i class="fa-solid fa-headset text-red-400 mr-2"></i>Support</div>
+                        </div>
+                    </div>
+                    <button onclick="openLoginModal()" class="w-full mt-6 py-2 bg-white/10 hover:bg-white/20 text-xs font-bold rounded-lg border border-white/20 transition">User Login</button>
+                </div>
+
+                <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-4">
+                            <div>
+                                <span class="text-[10px] bg-blue-500 text-white px-2 py-0.5 font-bold rounded">EMPLOYER PORTAL</span>
+                                <p class="text-xs font-mono text-slate-400 mt-1">Corporate EDFC ID</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs font-medium mb-4">
+                            <div class="flex justify-between p-2.5 bg-slate-800 rounded-lg border border-slate-700/50">
+                                <span><i class="fa-solid fa-plus-circle text-blue-400 mr-2"></i>Post Job Vacancy</span>
+                                <i class="fa-solid fa-chevron-right text-slate-500"></i>
+                            </div>
+                            <div class="flex justify-between p-2.5 bg-slate-800 rounded-lg border border-slate-700/50">
+                                <span><i class="fa-solid fa-users text-emerald-400 mr-2"></i>Applicant Shortlist</span>
+                                <span class="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded text-[10px]">12 New</span>
+                            </div>
+                            <div class="flex justify-between p-2.5 bg-slate-800 rounded-lg border border-slate-700/50">
+                                <span><i class="fa-solid fa-file-invoice text-purple-400 mr-2"></i>Payroll & EPFO/ESIC</span>
+                                <i class="fa-solid fa-chevron-right text-slate-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openLoginModal()" class="w-full mt-6 py-2 bg-blue-600 hover:bg-blue-700 text-xs font-bold rounded-lg transition">Employer Access</button>
+                </div>
+
+                <div class="bg-slate-900 text-white rounded-2xl p-6 shadow-xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-4">
+                            <div>
+                                <span class="text-[10px] bg-emerald-500 text-slate-950 px-2 py-0.5 font-bold rounded">BUSINESS PORTAL</span>
+                                <p class="text-xs font-mono text-slate-400 mt-1">MSME / Enterprise ID</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center text-xs">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 text-xs font-medium mb-4">
+                            <div class="flex justify-between p-2.5 bg-slate-800 rounded-lg border border-slate-700/50">
+                                <span><i class="fa-solid fa-receipt text-amber-400 mr-2"></i>GST & Income Tax Filings</span>
+                                <span class="text-emerald-400 text-[10px]">Active</span>
+                            </div>
+                            <div class="flex justify-between p-2.5 bg-slate-800 rounded-lg border border-slate-700/50">
+                                <span><i class="fa-solid fa-book text-indigo-400 mr-2"></i>Accounting & Bookkeeping</span>
+                                <i class="fa-solid fa-chevron-right text-slate-500"></i>
+                            </div>
+                            <div class="flex justify-between p-2.5 bg-slate-800 rounded-lg border border-slate-700/50">
+                                <span><i class="fa-solid fa-handshake text-red-400 mr-2"></i>Loan & DPR Reports</span>
+                                <i class="fa-solid fa-chevron-right text-slate-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openLoginModal()" class="w-full mt-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-xs font-bold rounded-lg transition">Business Access</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="py-16 bg-[#06182E] text-white px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-extrabold mb-4">ANNUAL MEMBERSHIP PLANS</h2>
+            <p class="text-slate-400 mb-12">One Customer • One PAN • One EDFC ID • One Login</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-300 uppercase">Standard</h3>
+                        <p class="text-3xl font-extrabold text-[#C59B27] my-4">₹499 <span class="text-xs text-slate-400">/Yr</span></p>
+                        <ul class="text-[11px] text-slate-400 space-y-2 text-left mb-6">
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Digital Member ID</li>
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Basic Support</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2 bg-[#C59B27] text-slate-900 font-bold rounded hover:bg-[#B38a20] transition">Select Plan</button>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-300 uppercase">Silver</h3>
+                        <p class="text-3xl font-extrabold text-[#C59B27] my-4">₹999 <span class="text-xs text-slate-400">/Yr</span></p>
+                        <ul class="text-[11px] text-slate-400 space-y-2 text-left mb-6">
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Digital ID & Card</li>
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Job Alerts</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2 bg-[#C59B27] text-slate-900 font-bold rounded hover:bg-[#B38a20] transition">Select Plan</button>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border-2 border-[#C59B27] flex flex-col justify-between relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C59B27] text-slate-900 text-[10px] px-2 py-0.5 font-bold rounded">POPULAR</span>
+                    <div>
+                        <h3 class="font-bold text-slate-300 uppercase">Gold</h3>
+                        <p class="text-3xl font-extrabold text-[#C59B27] my-4">₹2,499 <span class="text-xs text-slate-400">/Yr</span></p>
+                        <ul class="text-[11px] text-slate-400 space-y-2 text-left mb-6">
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Priority Support</li>
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Service Discounts</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2 bg-[#C59B27] text-slate-900 font-bold rounded hover:bg-[#B38a20] transition">Select Plan</button>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-300 uppercase">Platinum</h3>
+                        <p class="text-3xl font-extrabold text-[#C59B27] my-4">₹4,999 <span class="text-xs text-slate-400">/Yr</span></p>
+                        <ul class="text-[11px] text-slate-400 space-y-2 text-left mb-6">
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Dedicated Agent</li>
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Reward Wallet</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2 bg-[#C59B27] text-slate-900 font-bold rounded hover:bg-[#B38a20] transition">Select Plan</button>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-300 uppercase">Corporate</h3>
+                        <p class="text-3xl font-extrabold text-[#C59B27] my-4">₹9,999 <span class="text-xs text-slate-400">/Yr</span></p>
+                        <ul class="text-[11px] text-slate-400 space-y-2 text-left mb-6">
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Payroll & HR Suite</li>
+                            <li><i class="fa-solid fa-check text-[#C59B27] mr-1"></i> Full Compliance</li>
+                        </ul>
+                    </div>
+                    <button onclick="openCreateIdModal()" class="w-full py-2 bg-[#C59B27] text-slate-900 font-bold rounded hover:bg-[#B38a20] transition">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="aiAssistantWidget" class="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+        <div id="aiChatWindow" class="hidden mb-4 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden text-slate-800">
+            <div class="bg-[#0A2540] text-white p-4 flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-robot text-[#C59B27]"></i>
+                    <span class="font-bold text-sm">Ask EDFC AI Assistant</span>
+                </div>
+                <button onclick="toggleAiAssistant()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="aiChatContent" class="p-4 h-64 overflow-y-auto space-y-3 text-xs">
+                <div class="bg-slate-100 p-3 rounded-lg max-w-[85%] leading-relaxed">
+                    नमस्कार! I am your EDFC Digital Assistant. How can I help you today?
+                </div>
+            </div>
+            <div class="p-3 border-t border-slate-100 bg-slate-50 flex gap-2">
+                <input type="text" id="aiInput" placeholder="Type (e.g., 'I need a job', 'GST registration')..." class="w-full px-3 py-2 border rounded-lg text-xs focus:outline-none focus:ring-1 focus:ring-[#0A2540]" onkeypress="if(event.key === 'Enter') handleAiQuery()">
+                <button onclick="handleAiQuery()" class="px-3 py-2 bg-[#0A2540] text-white text-xs rounded-lg hover:bg-[#12365B]"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button onclick="toggleAiAssistant()" class="ai-pulse flex items-center gap-2 bg-[#0A2540] text-white px-4 py-3 rounded-full shadow-2xl hover:bg-[#12365B] border-2 border-[#C59B27] transition">
+            <i class="fa-solid fa-robot text-lg text-[#C59B27]"></i>
+            <span class="font-bold text-xs">Ask EDFC AI</span>
+        </button>
+    </div>
+
+    <footer id="contact" class="bg-[#040F1E] text-slate-400 py-12 px-4 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h4 class="text-white font-bold mb-3 text-sm">EDFC FINTECH SERVICES PVT LTD</h4>
+                <p class="text-xs leading-relaxed">Empowering Businesses, Building Better India through synchronized Employment, Self-Employment & Financial Solutions.</p>
+                <p class="text-xs text-[#C59B27] mt-3 font-semibold">One Customer • One PAN • One EDFC ID • One Login</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-sm">Ecosystem Services</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#employment" class="hover:text-white transition">EDFC Employment Service Center</a></li>
+                    <li><a href="#fintech" class="hover:text-white transition">EDFC FINTECH Services</a></li>
+                    <li><a href="#finserv" class="hover:text-white transition">EDFC FINSERV Advisory</a></li>
+                    <li><a href="#digital" class="hover:text-white transition">EDFC Web Digital Solutions</a></li>
+                    <li><a href="#mission" class="hover:text-white transition">EDFC Development Mission</a></li>
+                    <li><a href="#times" class="hover:text-white transition">EDFC Times News & Media</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-sm">Quick Links</h4>
+                <ul class="text-xs space-y-2">
+                    <li><a href="#home" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#membership" class="hover:text-white transition">Membership Plans</a></li>
+                    <li><a href="#dashboards" class="hover:text-white transition">User & Business Portals</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white transition">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-sm">Contact Information</h4>
+                <p class="text-xs mb-2"><i class="fa-solid fa-phone mr-2 text-[#C59B27]"></i> 96235 95774 | 99703 36233</p>
+                <p class="text-xs mb-3"><i class="fa-solid fa-envelope mr-2 text-[#C59B27]"></i> edfcfintech@gmail.com</p>
+                <p class="text-xs leading-relaxed">
+                    <i class="fa-solid fa-location-dot mr-2 text-[#C59B27]"></i> 
+                    Plot No.1, Ground Floor, Satyam Nagar, N-5, CIDCO, Chhatrapati Sambhajinagar - 431003
+                </p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center text-xs pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <span>© 2026 EDFC FINTECH SERVICES PRIVATE LIMITED. All Rights Reserved.</span>
+            <span class="text-slate-500">EDFC Group Ecosystem</span>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = (i === index) ? '1' : '0';
+            });
+            dots.forEach((dot, i) => {
+                dot.className = (i === index) 
+                    ? 'dot w-3 h-3 rounded-full bg-[#C59B27] transition' 
+                    : 'dot w-3 h-3 rounded-full bg-white/40 transition';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(0);
+        setInterval(nextSlide, 4000);
+
+        function openLoginModal() { document.getElementById('loginModal').classList.remove('hidden'); }
+        function closeLoginModal() { document.getElementById('loginModal').classList.add('hidden'); }
+        function openCreateIdModal() { document.getElementById('createIdModal').classList.remove('hidden'); }
+        function closeCreateIdModal() { document.getElementById('createIdModal').classList.add('hidden'); }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const val = document.getElementById('loginIdInput').value;
+            alert("Login submitted for " + val);
+            closeLoginModal();
+        }
+
+        function handleCreateId(e) {
+            e.preventDefault();
+            const name = document.getElementById('regName').value;
+            const pass = document.getElementById('regPassword').value;
+            const confirmPass = document.getElementById('regConfirmPassword').value;
+
+            if (pass !== confirmPass) {
+                alert("Passwords do not match! Please check and try again.");
+                return;
+            }
+
+            alert("Registration successful for " + name + ". Your EDFC ID will be generated.");
+            document.getElementById('createIdForm').reset();
+            closeCreateIdModal();
+        }
+
+        function toggleAiAssistant() {
+            const chat = document.getElementById('aiChatWindow');
+            chat.classList.toggle('hidden');
+        }
+
+        function handleAiQuery() {
+            const input = document.getElementById('aiInput');
+            const content = document.getElementById('aiChatContent');
+            const query = input.value.trim().toLowerCase();
+            
+            if (!query) return;
+
+            const userMsg = document.createElement('div');
+            userMsg.className = "bg-[#0A2540] text-white p-3 rounded-lg max-w-[85%] ml-auto leading-relaxed";
+            userMsg.innerText = input.value;
+            content.appendChild(userMsg);
+
+            input.value = '';
+
+            let responseText = "You can register your EDFC ID to get started across all our services.";
+            if (query.includes("job") || query.includes("नोकरी") || query.includes("employment")) {
+                responseText = "For employment guidance & job applications, please register via our 'EDFC Employment Service Center'.";
+            } else if (query.includes("business") || query.includes("व्यवसाय") || query.includes("gst") || query.includes("tax")) {
+                responseText = "For business registrations, GST filings, and compliance, visit the 'EDFC FINTECH' portal.";
+            } else if (query.includes("epfo") || query.includes("esic") || query.includes("compliance")) {
+                responseText = "Our HR & Labour Compliance division under EDFC Employment Center handles EPFO, ESIC, and Payroll filings.";
+            }
+
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = "bg-slate-100 p-3 rounded-lg max-w-[85%] leading-relaxed";
+                aiMsg.innerText = responseText;
+                content.appendChild(aiMsg);
+                content.scrollTop = content.scrollHeight;
+            }, 600);
+            
+            content.scrollTop = content.scrollHeight;
+        }
+    </script>
+</body>
+</html>
